@@ -1,0 +1,16 @@
+<div class="home">
+  <h1>Todo List</h1>
+  <form @submit.prevent="addTodo">
+    <input v-model="newTodo" placeholder="Nhập công việc..." />
+    <button>Thêm</button>
+  </form>
+
+  <ul>
+    <TodoItem
+      v-for="(todo, index) in todos"
+      :key="index"
+      :todo="todo"
+      @remove="removeTodo(index)"
+    />
+  </ul>
+</div>
