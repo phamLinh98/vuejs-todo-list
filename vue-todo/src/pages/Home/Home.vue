@@ -1,5 +1,3 @@
-import Test from './Test.vue'
-
 <template src="./Home.html">
     <Test :message="msg" />
 </template>
